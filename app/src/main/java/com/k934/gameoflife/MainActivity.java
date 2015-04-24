@@ -26,6 +26,8 @@ public class MainActivity extends Activity implements OnClickListener {
             switch (v.getId()) {
                 case R.id.new_button:
                     Toast.makeText(this, "Скоро эта кнопка будет запускать игру!:)", Toast.LENGTH_SHORT).show();
+                    Intent gridIntent = new Intent(this, GridActivity.class);
+                    startActivity(gridIntent);
                     break;
             }
         }
