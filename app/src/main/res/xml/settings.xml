@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference android:key="UNDERPOPULATION_VARIABLE"
+        android:title="Minimum variable"
+        android:summary="Underpopulation"
+        android:entries="@array/population_options" android:entryValues="@array/population_values"
+        android:dialogTitle="Minimum variable" android:defaultValue="2" />
+
+    <ListPreference android:key="OVERPOPULATION_VARIABLE"
+        android:title="Maximum variable"
+        android:summary="Overpopulation"
+        android:entries="@array/population_options" android:entryValues="@array/population_values"
+        android:dialogTitle="Maximum variable" android:defaultValue="3" />
+
+    <ListPreference android:key="SPAWN_VARIABLE"
+        android:title="Spawn variable"
+        android:summary="Spawn"
+        android:entries="@array/population_options" android:entryValues="@array/population_values"
+        android:dialogTitle="Spawn variable" android:defaultValue="3" />
+
+    <ListPreference android:key="ANIMATION_SPEED_VARIABLE"
+        android:title="Animation speed" android:entries="@array/animation_speed_options"
+        android:entryValues="@array/animation_speed_values"
+        android:dialogTitle="Animation speed" android:defaultValue="3" />
+</PreferenceScreen>

@@ -37,7 +37,7 @@ public class GridActivity extends Activity {
         switch (item.getItemId()) {
             case R.id.action_settings:
                 Toast.makeText(this, "Скоро здесь будут настройки", Toast.LENGTH_SHORT).show();
-                //startActivity(new Intent(this, PreferencesActivity.class));
+                startActivity(new Intent(this, SettingsActivity.class));
                 return true;
             case R.id.action_exit:
                 Toast.makeText(this, "Скоро здесь будет выход", Toast.LENGTH_SHORT).show();

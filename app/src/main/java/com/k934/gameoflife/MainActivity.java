@@ -22,6 +22,8 @@ public class MainActivity extends Activity implements OnClickListener {
         newButton.setOnClickListener(this);
         View exitButton = findViewById(R.id.exit_button);
         exitButton.setOnClickListener(this);
+        View setButton = findViewById(R.id.settings_button);
+        setButton.setOnClickListener(this);
     }
 
         public void onClick(View v) {
@@ -34,6 +36,10 @@ public class MainActivity extends Activity implements OnClickListener {
                 case R.id.exit_button:
                     Toast.makeText(this, "Здесь выход,вроде", Toast.LENGTH_SHORT).show();
                     finish();
+                    break;
+                case R.id.settings_button:
+                    Intent settIntent = new Intent(this, Position.class);
+                    startActivity(settIntent);
                     break;
             }
         }
