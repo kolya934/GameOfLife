@@ -20,6 +20,8 @@ public class MainActivity extends Activity implements OnClickListener {
 
         View newButton = findViewById(R.id.new_button);
         newButton.setOnClickListener(this);
+        View exitButton = findViewById(R.id.exit_button);
+        exitButton.setOnClickListener(this);
     }
 
         public void onClick(View v) {
@@ -28,6 +30,10 @@ public class MainActivity extends Activity implements OnClickListener {
                     Toast.makeText(this, "Скоро эта кнопка будет запускать игру!:)", Toast.LENGTH_SHORT).show();
                     Intent gridIntent = new Intent(this, GridActivity.class);
                     startActivity(gridIntent);
+                    break;
+                case R.id.exit_button:
+                    Toast.makeText(this, "Здесь выход,вроде", Toast.LENGTH_SHORT).show();
+                    finish();
                     break;
             }
         }
@@ -39,7 +45,7 @@ public class MainActivity extends Activity implements OnClickListener {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
 

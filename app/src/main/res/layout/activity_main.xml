@@ -13,9 +13,29 @@
             android:background="@color/button"
             android:textColor="@color/button_text"
             style="@style/Base.Widget.AppCompat.ActionButton"
-            android:elevation="3dp"
-            android:focusable="true"
-            android:enabled="true" />
+            android:elevation="5dp"
+            android:focusable="false"
+            android:enabled="true"
+            android:translationZ="5dp" />
+
+        <Space
+            android:layout_width="20px"
+            android:layout_height="30px" />
+
+        <Button android:id="@+id/exit_button" android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:text="@string/exit_button"
+            android:background="@color/button"
+            android:textColor="@color/button_text"
+            style="@style/Base.Widget.AppCompat.ActionButton"
+            android:elevation="30dp"
+            android:focusable="false"
+            android:enabled="true"
+            android:translationZ="5dp"
+            />
+
+        <Space
+            android:layout_width="20px"
+            android:layout_height="40px" />
 
     </LinearLayout>
 </LinearLayout>

@@ -7,4 +7,5 @@
     <string name="settings_label">Settings…</string>
     <string name="settings_title">Game of Life Settings</string>
     <string name="settings_shortcut">s</string>
+    <string name="exit_button">Exit</string>
 </resources>
