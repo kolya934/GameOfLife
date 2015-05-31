@@ -7,11 +7,10 @@ import android.content.Context;
 
 public class Life {
 
-    public static final int CELL_SIZE = 32; //размер клетки
+    public static final int CELL_SIZE = 40; //размер клетки
     public static final int WIDTH = 1080 / CELL_SIZE; //ширина / размер клетки
-    public static final int HEIGHT = 1500 / CELL_SIZE;
+    public static final int HEIGHT = 1520 / CELL_SIZE;
 
-    private int [][] tempGrid;
     private static final int[][] _lifeGrid = new int[HEIGHT][WIDTH];
 
     private Context _context;
@@ -25,48 +24,17 @@ public class Life {
         return _lifeGrid; //вернуть сетку
     }
 
-    //public void scangrid()
-    //{
-    //    tempGrid = Position.scanSet;
-    //}
-
     public void initializeGrid() {
         resetGrid(_lifeGrid);
 
-       /* _lifeGrid[8][(WIDTH / 2) - 1] = 1;
-        _lifeGrid[8][(WIDTH / 2) + 1] = 1;
-        _lifeGrid[9][(WIDTH / 2) - 1] = 1;
-        _lifeGrid[9][(WIDTH / 2) + 1] = 1;
-        _lifeGrid[10][(WIDTH / 2) - 1] = 1;
-        _lifeGrid[10][(WIDTH / 2)] = 1;
-        _lifeGrid[10][(WIDTH / 2) + 1] = 1;
-        _lifeGrid[11][(WIDTH / 2) + 1] = 1;
-        _lifeGrid[12][(WIDTH / 2) + 1] = 1;
-        _lifeGrid[1][2] = Position.LifeSet[1][1];
-        _lifeGrid[2][3] = 1;
-        _lifeGrid[3][1] = 1;
-        _lifeGrid[3][2] = 1;
-        _lifeGrid[3][3] = 1;
-
-        _lifeGrid[11][12] = 1;
-        _lifeGrid[12][13] = 1;
-        _lifeGrid[13][11] = 1;
-        _lifeGrid[13][12] = 1;
-        _lifeGrid[13][13] = 1;*/
-
-        for (int h = 0; h < 5; h++) {
-            for (int w = 0; w < 5; w++) {
-                _lifeGrid[h+1][w+1] = Position.LifeSet[h][w];
+        //TODO rewrite!
+        for (int h = 0; h < 10; h++) {
+            for (int w = 0; w < 10; w++) {
+                _lifeGrid[h+14][w+8] = Position.LifeSet[h][w];
             }
         }
 
     } //инициализация сетки, начальные параметры
-
-    /*public int returnSpeed()
-    {
-       return Integer.parseInt(SettingsActivity
-               .getAnimationSpeed(this._context));
-    };*/
 
     public void generateNextGeneration() {
         int neighbours;

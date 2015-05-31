@@ -9,11 +9,15 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class GridActivity extends Activity {
 
     private GridView _gridView;
+
+
 
     /** Called when the activity is first created. */
     @Override
@@ -36,11 +40,11 @@ public class GridActivity extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_settings:
-                Toast.makeText(this, "Скоро здесь будут настройки", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(this, "Скоро здесь будут настройки", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(this, SettingsActivity.class));
                 return true;
             case R.id.action_exit:
-                Toast.makeText(this, "Скоро здесь будет выход", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(this, "Скоро здесь будет выход", Toast.LENGTH_SHORT).show();
                 finishAffinity();
                 return true;
         }

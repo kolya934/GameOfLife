@@ -18,8 +18,8 @@
         android:entries="@array/population_options" android:entryValues="@array/population_values"
         android:dialogTitle="Spawn variable" android:defaultValue="3" />
 
-    <ListPreference android:key="ANIMATION_SPEED_VARIABLE"
+   <!-- <ListPreference android:key="ANIMATION_SPEED_VARIABLE"
         android:title="Animation speed" android:entries="@array/animation_speed_options"
         android:entryValues="@array/animation_speed_values"
-        android:dialogTitle="Animation speed" android:defaultValue="3" />
+        android:dialogTitle="Animation speed" android:defaultValue="3" /> -->
 </PreferenceScreen>

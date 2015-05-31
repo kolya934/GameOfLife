@@ -24,22 +24,25 @@ public class MainActivity extends Activity implements OnClickListener {
         exitButton.setOnClickListener(this);
         View setButton = findViewById(R.id.settings_button);
         setButton.setOnClickListener(this);
+
     }
 
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.new_button:
-                    Toast.makeText(this, "Скоро эта кнопка будет запускать игру!:)", Toast.LENGTH_SHORT).show();
-                    Intent gridIntent = new Intent(this, GridActivity.class);
-                    startActivity(gridIntent);
+                    //Toast.makeText(this, "Скоро эта кнопка будет запускать игру!:)", Toast.LENGTH_SHORT).show();
+                    Intent startIntent = new Intent(this, Position.class);
+                    startActivity(startIntent);
                     break;
                 case R.id.exit_button:
-                    Toast.makeText(this, "Здесь выход,вроде", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(this, "Здесь выход,вроде", Toast.LENGTH_SHORT).show();
                     finish();
                     break;
                 case R.id.settings_button:
-                    Intent settIntent = new Intent(this, Position.class);
+                    //Intent settIntent = new Intent(this, Position.class);
+                    Intent settIntent = new Intent(this, SettingsActivity.class);
                     startActivity(settIntent);
+
                     break;
             }
         }
@@ -47,28 +50,4 @@ public class MainActivity extends Activity implements OnClickListener {
     }
 
 
-    /*
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
-    }
 
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    */
