@@ -3,13 +3,13 @@
     <string name="app_name">Game of Life</string>
     <string name="main_title">Game of Life</string>
     <string name="new_game_button">New Game</string>
-    <string name="grid_title">Game of Life Grid</string>
+    <string name="grid_title">Game of Life</string>
     <string name="settings_label">Settings…</string>
     <string name="settings_title">Game of Life Settings</string>
     <string name="settings_shortcut">s</string>
     <string name="exit_button">Exit</string>
     <string name="settings_button">Settings</string>
-    <string name="title_activity_position">Position</string>
+    <string name="title_activity_position">Zero generation</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>

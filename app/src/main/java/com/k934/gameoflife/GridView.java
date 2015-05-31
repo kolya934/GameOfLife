@@ -10,6 +10,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.TextView;
 
 public class GridView extends View {
 
@@ -18,7 +19,7 @@ public class GridView extends View {
 
     private Life _life;
 
-    public long _moveDelay = 250; //=Life.DELAY;
+    public long _moveDelay = 333; //=Life.DELAY;
 
     private RefreshHandler _redrawHandler = new RefreshHandler();
 
@@ -39,7 +40,7 @@ public class GridView extends View {
     public GridView(Context context, AttributeSet attrs) {
         super(context, attrs);
         _life = new Life(context);
-        //initGridView();
+
     }
 
     public void setMode(int mode) {
@@ -48,7 +49,6 @@ public class GridView extends View {
             return;
         }
         if (mode == PAUSE) {
-            // TODO: implement.
         }
     }
 
@@ -76,14 +76,17 @@ public class GridView extends View {
                 }
             }
         }
+
+
     }
+
+
 
     private void update() {
         _life.generateNextGeneration();
         _redrawHandler.sleep(_moveDelay);
+
     }
 
-    /*private void initGridView() {
-        setFocusable(true);
-    }*/
+
 }
